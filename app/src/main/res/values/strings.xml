@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Triangulo4B</string>
+
+    <!-- Opciones del Spinner -->
+    <string-array name="figuras_array">
+        <item>Triángulo</item>
+        <item>Rectángulo</item>
+        <item>Cuadrado</item>
+        <item>Circulo</item>
+    </string-array>
+
+</resources>
