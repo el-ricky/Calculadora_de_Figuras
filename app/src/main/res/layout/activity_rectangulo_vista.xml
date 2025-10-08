@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".Vista.MainActivity">
+    tools:context=".Vista.RectanguloVista">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,39 +27,29 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculadora de Triangulos 4B"
+            android:text="Calculadora de Rectangulo 4B"
             android:textAlignment="center"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/edtl1"
+            android:id="@+id/edtBase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:hint="Captura el lado 1"
+            android:hint="Captura la base"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+        <EditText
+            android:id="@+id/edtAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:hint="Captura la altura"
             android:textAlignment="center"
             android:textSize="25sp"
             android:textStyle="italic" />
 
-        <EditText
-            android:id="@+id/edtl2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:hint="Captura el lado 2"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/edtl3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:hint="Captura el lado 3"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textStyle="italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,22 +61,16 @@
                 android:id="@+id/btnArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="50dp"
                 android:text="Area" />
 
             <Button
                 android:id="@+id/btnPerimetro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="30dp"
                 android:text="Perimetro" />
 
-            <Button
-                android:id="@+id/btnTipo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:text="Tipo" />
         </LinearLayout>
 
         <TextView
@@ -98,4 +82,7 @@
             android:textAlignment="center"
             android:textSize="25sp" />
     </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -101,6 +101,7 @@ class TrianguloPresentador(private val vista: ContratoTriangulo.Vista): Contrato
         }
     }
 
+    //funciones circulo
     override fun areaCirculo(radio: Float)
     {
         if(modelo.validaCirculo(radio))
