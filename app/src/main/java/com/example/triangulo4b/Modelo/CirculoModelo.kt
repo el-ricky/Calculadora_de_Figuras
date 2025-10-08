@@ -8,7 +8,7 @@ class CirculoModelo: ContratoCirculo.modelo
     //Funciones del circulo
     override fun areaCirculo(radio: Float): Float
     {
-        val area= PI.toFloat() * radio * radio
+        val area= PI.toFloat() * (radio * radio)
         return area
     }
 

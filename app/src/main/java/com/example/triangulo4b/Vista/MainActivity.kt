@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity(), ContratoTriangulo.Vista
     private lateinit var presentador: ContratoTriangulo.Presentador
 
 
-
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -37,11 +36,14 @@ class MainActivity : AppCompatActivity(), ContratoTriangulo.Vista
         val btnArea=findViewById<Button>(R.id.btnArea);
         val btnPerimetro= findViewById<Button>(R.id.btnPerimetro);
         val btnTipo=findViewById<Button>(R.id.btnTipo);
-
         txvRes=findViewById<TextView>(R.id.txvResultado);
 
         //inicializamos al presentador
         presentador= TrianguloPresentador(this)
+
+        //declaramos el boton de regresar
+        val btnRegresar = findViewById<Button>(R.id.btnRegresar)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main))
         { v, insets ->
@@ -70,6 +72,10 @@ class MainActivity : AppCompatActivity(), ContratoTriangulo.Vista
             val l2 = txtl2.text.toString().toFloat()
             val l3 = txtl3.text.toString().toFloat()
             presentador.tipo(l1,l2,l3);
+        }
+        // Configurar el botón de regreso
+        btnRegresar.setOnClickListener {
+            finish()   // Cierra la calculadora y vuelve al MenuFiguras
         }
     }
 

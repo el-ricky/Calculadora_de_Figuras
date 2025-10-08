@@ -33,6 +33,8 @@ class RectanguloVista : AppCompatActivity(), ContratoRectangulo.Vista {
         //inicializamos al presentador
         presentador= RectanguloPresentador(this)
 
+        val btnRegresar = findViewById<Button>(R.id.btnRegresar)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -51,6 +53,11 @@ class RectanguloVista : AppCompatActivity(), ContratoRectangulo.Vista {
             val l1 = txtl1.text.toString().toFloat();
             val l2 = txtl2.text.toString().toFloat();
             presentador.areaRectangulo(l1,l2);
+        }
+
+        // Configurar el botón de regreso
+        btnRegresar.setOnClickListener {
+            finish()   // Cierra la calculadora y vuelve al MenuFiguras
         }
 
     }

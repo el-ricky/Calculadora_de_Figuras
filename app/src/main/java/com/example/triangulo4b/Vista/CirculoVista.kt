@@ -31,6 +31,9 @@ class CirculoVista : AppCompatActivity(), ContratoCirculo.vista {
         //inicializamos al presentador
         presentador= CirculoPresentador(this)
 
+        //declaramos el boton de regresar
+        val btnRegresar = findViewById<Button>(R.id.btnRegresar)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -39,7 +42,6 @@ class CirculoVista : AppCompatActivity(), ContratoCirculo.vista {
         }
 
         btnPerimetro.setOnClickListener {
-
             val l1 = txtl1.text.toString().toFloat();
             presentador.perimetroCirculo(l1);
         }
@@ -47,7 +49,12 @@ class CirculoVista : AppCompatActivity(), ContratoCirculo.vista {
         btnArea.setOnClickListener {
 
             val l1 = txtl1.text.toString().toFloat();
-            presentador.perimetroCirculo(l1);
+            presentador.areaCirculo(l1);
+        }
+
+        // Configurar el botón de regreso
+        btnRegresar.setOnClickListener {
+            finish()   // Cierra la calculadora y vuelve al MenuFiguras
         }
 
     }

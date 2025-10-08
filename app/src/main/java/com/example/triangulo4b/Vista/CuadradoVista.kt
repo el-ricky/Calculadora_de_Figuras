@@ -33,6 +33,10 @@ class CuadradoVista : AppCompatActivity(), ContratoCuadrado.vista {
         //inicializamos al presentador
         presentador= CuadradoPresentador(this)
 
+        //declaramos el boton de regresar
+        val btnRegresar = findViewById<Button>(R.id.btnRegresar)
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -49,6 +53,12 @@ class CuadradoVista : AppCompatActivity(), ContratoCuadrado.vista {
             val l1 = txtl1.text.toString().toFloat();
             presentador.areaCuadrado(l1);
         }
+
+        // Configurar el botón de regreso
+        btnRegresar.setOnClickListener {
+            finish()   // Cierra la calculadora y vuelve al MenuFiguras
+        }
+
 
     }
 

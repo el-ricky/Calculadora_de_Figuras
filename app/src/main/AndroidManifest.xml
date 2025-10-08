@@ -12,20 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Triangulo4B">
         <activity
+            android:name=".Vista.CuadradoVista"
+            android:exported="true" />
+        <activity
             android:name=".Vista.CirculoVista"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Vista.MainActivity"
-            android:exported="false" />
-
+            android:exported="true" />
         <activity
             android:name=".Vista.RectanguloVista"
-            android:exported="false" />
+            android:exported="true" />
         <activity
-            android:name=".Vista.CuadradoVista"
+            android:name=".Vista.MenuFiguras"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
